@@ -9,11 +9,31 @@ package examendual;
  *
  * @author unaii
  */
-public interface doc
-{
-   
-   // Devuelve el contenido del archivo tras insertar la linea line en la linea numero x, el contenido de la linea x, pasa a ser la linea x+1 y asi sucesivamente.
-   public abstract String escribirLinea(int x, String line, String file);
-   
-   
+public interface doc {
+
+    // Devuelve el contenido del archivo tras insertar la linea line en la linea numero x, el contenido de la linea x, pasa a ser la linea x+1 y asi sucesivamente.
+    /**
+     *
+     * @param x numero de la linea en la que se inserta
+     * @param line frase que se quiere insertar
+     * @param file conjunto de lineas donde se quiere insertar la linea
+     * @return devulve un string del conjunto de lineas con la frase insertada
+     * inserta line en la linea x de file y mueve todas las siguientes lineas 1
+     * numero
+     */
+    
+    public abstract String escribirLinea(int x, String line, String file);
+
+    
+    
+    /**
+     * 
+     * resumen calcula el are de una ciudad indicada.
+     * entrada recide un String con la ciudad
+     * salida devuelve un float con el area en km^2 
+     * precondicion la ciudad tiene que ser una ciudad existente
+     */
+    public abstract float devuelveArea(String ciudad);
+    
+    
 }
